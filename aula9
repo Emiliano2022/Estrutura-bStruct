@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Livro {
+    char titulo[20];
+    char autor[50];
+    char genero [50];
+    int ano_de_publicacao;
+} Livro;
+
+int main() {
+    Livro livro;
+    
+    printf("Digite o titulo do livro: ");
+    fgets(livro.titulo, 20, stdin);
+    
+    printf("Digite o autor do livro: ");
+    fgets(livro.autor, 50, stdin);
+    
+    printf("Digite o genero do livro: ");
+    fgets(livro.genero, 50, stdin);
+    
+    printf("Digite o ano de publicacao do livro: ");
+    scanf("%d", &livro.ano_de_publicacao);
+    
+    printf("\nCadastro realizado com sucesso!\n");
+    printf("Titulo do livro: %s", livro.titulo);
+    printf("Autor do livro: %s", livro.autor);
+	printf("Genero do livro: %s",livro.genero);
+    printf("Ano de publicacao do livro: %d\n", livro.ano_de_publicacao);
+    
+    return 0;
+}
